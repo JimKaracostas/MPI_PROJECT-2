@@ -8,7 +8,7 @@ A C-based parallel computing application using **MPI (Message Passing Interface)
 
 ## ⚙️ Features & Operations
 
-[cite_start]The application supports the following operations on matrices $A(1 \times N)$, $B(N \times 1)$, $C(N \times N)$, and $D(N \times N)$[cite: 6]:
+The application supports the following operations on matrices $A(1 \times N)$, $B(N \times 1)$, $C(N \times N)$, and $D(N \times N)$[cite: 6]:
 
 1.  **Operation I: Matrix Addition ($C + D$)**
     * [cite_start]Calculates the sum of two 2D matrices[cite: 7].
