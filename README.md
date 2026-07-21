@@ -1,4 +1,17 @@
-# MPI Parallel Matrix Operations
+<h1 align="center">
+  MPI Matrix Operations 🧮
+</h1>
+
+<p align="center">
+  <strong>A C-based parallel computing application using MPI for linear algebra operations.</strong>
+</p>
+
+<p align="center">
+  <img alt="C" src="https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white">
+  <img alt="MPI" src="https://img.shields.io/badge/MPI-Parallel_Computing-blue">
+</p>
+
+<hr>
 
 A C-based parallel computing application using **MPI (Message Passing Interface)** to perform various linear algebra operations on matrices and vectors.
 
@@ -15,7 +28,7 @@ The application supports the following operations on matrices $A(1 \times N)$, $
     * **Constraint:** $N$ must be a multiple of $p$ ($N \% p = 0$).
 
 2.  **Operation II: Matrix-Vector Multiplication ($C \cdot B$)**
-    * Multiplies a 2D matrix by a column vector[cite: 8].
+    * Multiplies a 2D matrix by a column vector.
     * **Constraint:** $N$ must be a multiple of $p$ ($N \% p = 0$).
 
 3.  **Operation III: Dot Product ($A \cdot B$)**
@@ -32,7 +45,8 @@ The application supports the following operations on matrices $A(1 \times N)$, $
 * **Communication:**
     * **Collective Communication:** Uses `MPI_Bcast`, `MPI_Scatter`, `MPI_Gather`, and `MPI_Reduce` for data distribution and result collection.
     * **Point-to-Point Communication:** Uses `MPI_Sendrecv` specifically for the Ring Topology algorithm in Operation IV.
-* **Memory Management:** * The Master node (Rank 0) allocates global matrices and handles I/O.
+* **Memory Management:** 
+    * The Master node (Rank 0) allocates global matrices and handles I/O.
     * All processors manage their own local memory to prevent leaks, freeing resources at the end of each menu iteration.
 
 ## 🚀 How to Compile and Run
@@ -46,3 +60,4 @@ Compile the code using `mpicc`:
 
 ```bash
 mpicc main.c -o mpi_matrix_ops
+```
