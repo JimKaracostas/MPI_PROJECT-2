@@ -1,5 +1,5 @@
 <h1 align="center">
-  MPI Matrix Operations 🧮
+  MPI Matrix Operations
 </h1>
 
 <p align="center">
